@@ -9,3 +9,16 @@
 #
 # > 120
 #
+
+def factorial(num)
+  arr = (1..num).to_a
+
+  total = arr.inject(1) do |first, val|
+    first *= val
+    first
+  end
+
+  puts total
+end
+
+factorial(5)

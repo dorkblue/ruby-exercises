@@ -6,3 +6,13 @@
 # letter_count('banana')
 #
 # > {"b" => 1, "a" => 3, "n" => 2}
+
+def letter_count(word)
+  hash = {}
+  word.each_char do |char|
+    hash[char] = word.count(char) unless hash[char]
+  end
+  puts hash
+end
+
+letter_count('banana')
